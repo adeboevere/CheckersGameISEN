@@ -1,9 +1,12 @@
 package isen.checkers.app;
 
+import isen.checkers.entity.Checkerboard;
+
 public class App {
 
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Checkerboard c = new Checkerboard ();
 		
 	}
 
