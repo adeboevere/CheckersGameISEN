@@ -30,8 +30,8 @@ public class Application extends JPanel {
     int[][] array;
     Color beige = new Color(221, 221, 179);
     Color brown = new Color(162, 112, 4);
-    Actor player = null;
-    Actor otherPlayer = null;
+    Player player = null;
+    Player otherPlayer = null;
     int whitePieces = 0;
     int blackPieces = 0;
 
@@ -71,7 +71,7 @@ public class Application extends JPanel {
         if (player instanceof Player || otherPlayer instanceof Player) {
             mouseListen();
             while (!invokeGameOver()){
-                repaint();
+                repaint(); //rafraichit le damier après l'action
             }
         }
 
@@ -225,7 +225,7 @@ public class Application extends JPanel {
 
         isWhiteMove = !isWhiteMove;
 
-        Actor temp = player;
+        Player temp = player;
         player = otherPlayer;
         otherPlayer = temp;
     }

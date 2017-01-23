@@ -1,9 +1,11 @@
 package isen.checkers; 
 
-public class Player extends Actor {
+public class Player{
 
+	public boolean isWhite;
+	
     public Player(boolean isWhite) {
-        super(isWhite);
+    	this.isWhite = isWhite;
     }
 
     public boolean valid(int[][] array, int row1, int col1, int row2, int col2,
