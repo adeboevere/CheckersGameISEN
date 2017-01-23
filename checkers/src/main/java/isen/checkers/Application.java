@@ -9,7 +9,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class Board extends JPanel {
+public class Application extends JPanel {
     /*
      * white cell = -1;
      * empty black cell = 0;
@@ -48,18 +48,17 @@ public class Board extends JPanel {
     boolean capture = false;
     boolean prevCapture;
 
-    public static void main(String[] args) {
+    public static void main( String[] args ) {
 
         JFrame jFrame = new JFrame();
 
-        Board board = new Board();
+        Application board = new Application();
 
-        board.setPreferredSize(new Dimension(720, 640));
+        board.setPreferredSize(new Dimension(640, 640));
         jFrame.add(board);
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jFrame.pack();
         jFrame.setVisible(true);
-        //jFrame.setResizable(false);
         board.setup();
         board.play();
 
