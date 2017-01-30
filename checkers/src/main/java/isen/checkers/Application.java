@@ -168,12 +168,10 @@ public class Application extends JPanel {
     public boolean invokeGameOver() {
         if (whitePieces == 0){
             System.out.println("black won");
-            displayImage("black_won.jpg");
             return true;
         }
         else if (blackPieces == 0){
             System.out.println("white won");
-            displayImage("white_won.jpg");
             return true;
         }
         return false;
@@ -189,7 +187,7 @@ public class Application extends JPanel {
             this.add(picLabel, BorderLayout.CENTER);
 
         } catch (IOException e) {
-            System.out.println("IOException, but you won");
+            System.out.println("IOException");
         }
     }
 
